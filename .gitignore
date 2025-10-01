@@ -1,0 +1,45 @@
+# Global ignores for this monorepo
+
+# Node
+node_modules/
+**/node_modules/
+
+# Yarn / PNPM / PnP
+.pnp.cjs
+.pnp.js
+.pnp/
+.yarn/
+.yarn/install-state.gz
+
+# Testing
+coverage/
+**/coverage/
+
+# Next.js
+.next/
+**/.next/
+out/
+**/out/
+
+# Production builds
+build/
+**/build/
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
