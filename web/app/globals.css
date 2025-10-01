@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #22d3ee;
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #9fb3c8;
+  --color-text-muted: #7b8aa0;
+  --color-surface-bg: #0b0f14;
+  --color-surface-elevated: #0f1520;
+  --color-border: #1f2a37;
+  --color-code-bg: #0f1720;
+}
+
+html, body {
+  background: var(--color-surface-bg);
+  color: var(--color-text-primary);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
