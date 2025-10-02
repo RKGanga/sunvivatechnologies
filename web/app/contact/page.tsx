@@ -1,9 +1,20 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 
+export const dynamic = 'force-dynamic'
+
 export default function ContactPage() {
+  // Wrap the component using useSearchParams in Suspense as required by Next.js
+  return (
+    <Suspense fallback={<div className="container py-12">Loading…</div>}>
+      <ContactPageInner />
+    </Suspense>
+  )
+}
+
+function ContactPageInner() {
   const search = useSearchParams()
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState<string | null>(null)
